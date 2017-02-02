@@ -1,19 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using MvpDemo.Presentation;
+﻿using System.Windows;
 using MvpDemo.Presentation.About;
-using Ninject;
 
 namespace MvpDemo.Desktop
 {
@@ -22,9 +8,9 @@ namespace MvpDemo.Desktop
     /// </summary>
     public partial class About : IAboutView
     {
-        private readonly IAboutPresenter _presenter;
+        private readonly IAboutPresenter<IAboutView> _presenter;
 
-        public About(IAboutPresenter presenter)
+        public About(IAboutPresenter<IAboutView> presenter)
         {
             InitializeComponent();
             _presenter = presenter;
@@ -41,7 +27,7 @@ namespace MvpDemo.Desktop
 
         public object Argument { get; set; }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void ButtonHomeClick(object sender, RoutedEventArgs e)
         {
             _presenter.Redirect();
         }

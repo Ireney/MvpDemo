@@ -1,5 +1,4 @@
 using MvpDemo.Data;
-using MvpDemo.Presentation;
 using MvpDemo.Presentation.About;
 using MvpDemo.Presentation.Navigation;
 using MvpDemo.Presentation.StockQuote;
@@ -22,8 +21,8 @@ namespace MvpDemo.Infrastructure
 
             //presentation
             Bind<INavigator>().To<Navigator>().InSingletonScope();
-            Bind<IStockQuotePresenter>().To<StockQuotePresenter>().InTransientScope();
-            Bind<IAboutPresenter>().To<AboutPresenter>().InTransientScope();
+            Bind<IStockQuotePresenter<IStockQuoteView>>().To<StockQuotePresenter>().InTransientScope();
+            Bind<IAboutPresenter<IAboutView>>().To<AboutPresenter>().InTransientScope();
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.UI;
-using MvpDemo.Presentation;
 using MvpDemo.Presentation.About;
 using Ninject;
 
@@ -9,11 +8,7 @@ namespace MvpDemo.Web
     public partial class About : Page, IAboutView
     {
         [Inject]
-        public IAboutPresenter Presenter
-        {
-            get;
-            set;
-        }
+        public IAboutPresenter<IAboutView> Presenter { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {

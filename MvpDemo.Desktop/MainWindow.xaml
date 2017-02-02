@@ -14,9 +14,9 @@
                  TextWrapping="Wrap" Text="MSFT,AMZN" VerticalAlignment="Top" Width="242" BorderBrush="LightGray">
         </TextBox>
         <Button x:Name="ButtonRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="257,10,0,0"
-                VerticalAlignment="Top" Width="75" Click="ButtonRefresh_Click" />
+                VerticalAlignment="Top" Width="75" Click="ButtonRefreshClick" />
         <Button x:Name="ButtonRedirect" Content="Redirect" HorizontalAlignment="Left" Margin="337,10,0,0"
-                VerticalAlignment="Top" Width="71" Click="ButtonRedirect_Click" />
+                VerticalAlignment="Top" Width="71" Click="ButtonRedirectClick" />
         <DataGrid x:Name="DataGridQuotes" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"
                   Height="239"
                   Width="398" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray" />

@@ -1,17 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using MvpDemo.Domain;
-using MvpDemo.Presentation;
-using MvpDemo.Presentation.Navigation;
 using MvpDemo.Presentation.StockQuote;
 
 namespace MvpDemo.Desktop
 {
     public partial class MainWindow : IStockQuoteView
     {
-        private readonly IStockQuotePresenter _presenter;
+        private readonly IStockQuotePresenter<IStockQuoteView> _presenter;
 
-        public MainWindow(IStockQuotePresenter presenter)
+        public MainWindow(IStockQuotePresenter<IStockQuoteView> presenter)
         {
             InitializeComponent();
             _presenter = presenter;
@@ -36,14 +34,14 @@ namespace MvpDemo.Desktop
             set { DataGridQuotes.ItemsSource = value; }
         }
 
-        private void ButtonRefresh_Click(object sender, RoutedEventArgs e)
-        {
-            _presenter.Refresh();
-        }
-
-        private void ButtonRedirect_Click(object sender, RoutedEventArgs e)
+        private void ButtonRedirectClick(object sender, RoutedEventArgs e)
         {
             _presenter.Redirect();
+        }
+
+        private void ButtonRefreshClick(object sender, RoutedEventArgs e)
+        {
+            _presenter.Refresh();
         }
     }
 }

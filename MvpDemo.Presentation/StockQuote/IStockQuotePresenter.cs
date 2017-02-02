@@ -1,8 +1,7 @@
 namespace MvpDemo.Presentation.StockQuote
 {
-    public interface IStockQuotePresenter
+    public interface IStockQuotePresenter<TView> : IPresenter<TView>
     {
-        void Present(IStockQuoteView view);
         void Refresh();
         void Redirect();
     }

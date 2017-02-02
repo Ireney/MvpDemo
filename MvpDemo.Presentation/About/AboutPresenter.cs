@@ -2,24 +2,18 @@ using MvpDemo.Presentation.Navigation;
 
 namespace MvpDemo.Presentation.About
 {
-    public class AboutPresenter : IAboutPresenter
+    public class AboutPresenter : PresenterBase<IAboutView>, IAboutPresenter<IAboutView>
     {
         private readonly INavigator _navigator;
-        private IAboutView _view;
-
+  
         public AboutPresenter(INavigator navigator)
         {
             _navigator = navigator;
         }
 
-        public void Present(IAboutView view)
-        {
-            _view = view;
-        }
-
         public void HandleParameter(object parameter)
         {
-           _view.Message = parameter == null ? "[No  value passed]" : parameter as string;
+           View.Message = parameter == null ? "[No  value passed]" : parameter as string;
         }
 
         public void Redirect()

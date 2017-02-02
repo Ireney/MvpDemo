@@ -3,9 +3,8 @@ using MvpDemo.Services;
 
 namespace MvpDemo.Presentation.StockQuote
 {
-    public class StockQuotePresenter : IStockQuotePresenter
+    public class StockQuotePresenter : PresenterBase<IStockQuoteView>, IStockQuotePresenter<IStockQuoteView>
     {
-        private IStockQuoteView _view;
         private readonly IQuoteService _quoteService;
         private readonly INavigator _navigator;
 
@@ -15,21 +14,16 @@ namespace MvpDemo.Presentation.StockQuote
             _navigator = navigator;
         }
 
-        public void Present(IStockQuoteView view)
-        {
-            _view = view;
-        }
-
         public void Refresh()
         {
-            var symbols = _view.Symbols;
+            var symbols = View.Symbols;
             var stocks = _quoteService.GetQuotes(symbols);
-            
-            _view.Quotes = stocks;
+
+            View.Quotes = stocks;
 
             var providerName = _quoteService.GetProviderName();
 
-            _view.Message = $"{stocks.Count} quotes found. Provided by {providerName}.";
+            View.Message = $"{stocks.Count} quotes found. Provided by {providerName}.";
         }
 
         public void Redirect()
