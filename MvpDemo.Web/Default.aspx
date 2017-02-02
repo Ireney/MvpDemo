@@ -3,38 +3,30 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1>MPV Demo</h1>
+        <p class="lead">MVP is a derivative of MVC aimed at providing a cleaner separation between the view, the model, and the controller.</p>
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
+        <div>
+            <h2>Stocks</h2>
+
+            <div class="form-inline">
+                <asp:TextBox CssClass="form-control" ID="txtSymbols" runat="server" Text="MSFT,GOOG,AMZN,CMG.TO,BEI-UN.TO"></asp:TextBox>
+                <asp:Button CssClass="btn btn-default" ID="btnRefresh" runat="server" Text="Refresh" onclick="RefreshClick"/>
+                <asp:Button CssClass="btn btn-default" ID="btnRedirect" runat="server" Text="About" onclick="RedirectClick"/>
+            </div>
+
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                <asp:GridView 
+                    CssClass="table table-bordered" 
+                    ID="GridView1" 
+                    runat="server">
+                </asp:GridView>
             </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+
+            <p class="text-right">
+                <asp:Label ID="lblMessage" runat="server"></asp:Label>
             </p>
         </div>
     </div>
