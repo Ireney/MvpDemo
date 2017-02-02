@@ -1,7 +1,7 @@
-﻿using System.Web;
-using MvpDemo.Presentation;
+using System.Web;
+using MvpDemo.Presentation.Navigation;
 
-namespace MvpDemo.Web
+namespace MvpDemo.Web.Navigation
 {
     public class SiteNavigationRouteSystem : INavigationRouteSystem
     {
@@ -17,16 +17,5 @@ namespace MvpDemo.Web
                     break;
             }
         }
-
-        public void NextViewFrom(string currentView, object argument)
-        {
-            switch (currentView)
-            {
-                case "home":
-                    // Calculate next view using logic
-                    break;
-            }
-        }
-
     }
 }

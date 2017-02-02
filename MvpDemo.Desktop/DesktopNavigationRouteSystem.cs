@@ -1,6 +1,5 @@
-using System;
 using System.Windows;
-using MvpDemo.Presentation;
+using MvpDemo.Presentation.Navigation;
 using Ninject;
 
 namespace MvpDemo.Desktop
@@ -36,11 +35,6 @@ namespace MvpDemo.Desktop
                     _aboutWindow.ShowDialog();
                     break;
             }
-        }
-
-        public void NextViewFrom(string currentView, object argument)
-        {
-            throw new NotImplementedException();
         }
     }
 }

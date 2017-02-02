@@ -1,11 +1,11 @@
-﻿using System.Linq;
+using MvpDemo.Presentation.Navigation;
 using MvpDemo.Services;
 
-namespace MvpDemo.Presentation
+namespace MvpDemo.Presentation.StockQuote
 {
     public class StockQuotePresenter : IStockQuotePresenter
     {
-        private IDefaultView _view;
+        private IStockQuoteView _view;
         private readonly IQuoteService _quoteService;
         private readonly INavigator _navigator;
 
@@ -15,7 +15,7 @@ namespace MvpDemo.Presentation
             _navigator = navigator;
         }
 
-        public void Present(IDefaultView view)
+        public void Present(IStockQuoteView view)
         {
             _view = view;
         }

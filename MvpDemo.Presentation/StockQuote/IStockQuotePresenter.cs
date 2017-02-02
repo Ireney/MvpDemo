@@ -1,8 +1,8 @@
-﻿namespace MvpDemo.Presentation
+namespace MvpDemo.Presentation.StockQuote
 {
     public interface IStockQuotePresenter
     {
-        void Present(IDefaultView view);
+        void Present(IStockQuoteView view);
         void Refresh();
         void Redirect();
     }

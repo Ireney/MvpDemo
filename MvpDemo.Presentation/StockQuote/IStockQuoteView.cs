@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using MvpDemo.Domain;
 
-namespace MvpDemo.Presentation
+namespace MvpDemo.Presentation.StockQuote
 {
-    public interface IDefaultView
+    public interface IStockQuoteView
     {
         IList<StockInfo> Quotes { get; set; }
         string Message { get; set; }

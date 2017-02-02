@@ -1,4 +1,4 @@
-﻿namespace MvpDemo.Presentation
+namespace MvpDemo.Presentation.About
 {
     public interface IAboutView
     {

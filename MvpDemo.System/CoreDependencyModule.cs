@@ -1,5 +1,8 @@
 using MvpDemo.Data;
 using MvpDemo.Presentation;
+using MvpDemo.Presentation.About;
+using MvpDemo.Presentation.Navigation;
+using MvpDemo.Presentation.StockQuote;
 using MvpDemo.Services;
 using Ninject.Modules;
 

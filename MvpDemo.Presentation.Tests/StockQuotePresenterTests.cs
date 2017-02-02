@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MvpDemo.Domain;
+using MvpDemo.Presentation.Navigation;
+using MvpDemo.Presentation.StockQuote;
 using MvpDemo.Services;
 using NSubstitute;
 
@@ -11,7 +13,7 @@ namespace MvpDemo.Presentation.Tests
     {
         private IQuoteService _quoteService;
         private INavigator _navigator;
-        private IDefaultView _defaultView;
+        private IStockQuoteView _defaultView;
         private StockQuotePresenter _sut;
 
         [TestInitialize]
@@ -21,7 +23,7 @@ namespace MvpDemo.Presentation.Tests
             _navigator = Substitute.For<INavigator>();
             _sut = new StockQuotePresenter(_quoteService, _navigator);
 
-            _defaultView = Substitute.For<IDefaultView>();
+            _defaultView = Substitute.For<IStockQuoteView>();
             _sut.Present(_defaultView);
         }
 
@@ -105,7 +107,7 @@ namespace MvpDemo.Presentation.Tests
             _sut.Redirect();
 
             //Assert
-            _navigator.Received().Goto("about", "Presenter Test");
+            _navigator.Received().Goto("about", "This text is an argument passed from the presenter.");
         }
     }
 }

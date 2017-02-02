@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Web.UI;
 using MvpDemo.Domain;
 using MvpDemo.Presentation;
+using MvpDemo.Presentation.Navigation;
+using MvpDemo.Presentation.StockQuote;
 using Ninject;
 
 namespace MvpDemo.Web
 {
-    public partial class _Default : Page, IDefaultView
+    public partial class _Default : Page, IStockQuoteView
     {
         [Inject]
         public IStockQuotePresenter StockQuotePresenter { get; set; } = null;

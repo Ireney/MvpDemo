@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MvpDemo.Presentation
+namespace MvpDemo.Presentation.Navigation
 {
     public class Navigator : INavigator
     {
@@ -28,12 +26,10 @@ namespace MvpDemo.Presentation
 
         public void NextViewFrom(string currentView)
         {
-            _navigationRouteSystem?.NextViewFrom(currentView, null);
         }
 
         public void NextViewFrom(string currentView, object argument)
         {
-            _navigationRouteSystem?.NextViewFrom(currentView, argument);
         }
     }
 }

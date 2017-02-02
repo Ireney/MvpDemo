@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MvpDemo.Presentation;
+using MvpDemo.Presentation.About;
 using Ninject;
 
 namespace MvpDemo.Desktop

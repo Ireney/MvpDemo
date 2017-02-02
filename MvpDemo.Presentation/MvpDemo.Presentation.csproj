@@ -40,16 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutPresenter.cs" />
-    <Compile Include="IAboutPresenter.cs" />
-    <Compile Include="IAboutView.cs" />
-    <Compile Include="IDefaultView.cs" />
-    <Compile Include="INavigationRouteSystem.cs" />
-    <Compile Include="INavigator.cs" />
-    <Compile Include="IStockQuotePresenter.cs" />
-    <Compile Include="Navigator.cs" />
-    <Compile Include="StockQuotePresenter.cs" />
+    <Compile Include="About\AboutPresenter.cs" />
+    <Compile Include="About\IAboutPresenter.cs" />
+    <Compile Include="About\IAboutView.cs" />
+    <Compile Include="Navigation\INavigationRouteSystem.cs" />
+    <Compile Include="Navigation\INavigator.cs" />
+    <Compile Include="Navigation\Navigator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockQuote\IStockQuotePresenter.cs" />
+    <Compile Include="StockQuote\IStockQuoteView.cs" />
+    <Compile Include="StockQuote\StockQuotePresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvpDemo.Domain\MvpDemo.Domain.csproj">

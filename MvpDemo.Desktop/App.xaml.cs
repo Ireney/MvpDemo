@@ -1,6 +1,8 @@
 ﻿using System.Windows;
 using MvpDemo.Infrastructure;
 using MvpDemo.Presentation;
+using MvpDemo.Presentation.Navigation;
+using MvpDemo.Presentation.StockQuote;
 using Ninject;
 
 namespace MvpDemo.Desktop
@@ -24,7 +26,7 @@ namespace MvpDemo.Desktop
         {
             _container = new StandardKernel();
             _container.Load<CoreDependencyModule>();
-            _container.Bind<IDefaultView>().To<MainWindow>();
+            _container.Bind<IStockQuoteView>().To<MainWindow>();
             _container.Bind<INavigationRouteSystem>().To<DesktopNavigationRouteSystem>().InSingletonScope();
         }
 

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MvpDemo.Presentation.Navigation;
 
-namespace MvpDemo.Presentation
+namespace MvpDemo.Presentation.About
 {
     public class AboutPresenter : IAboutPresenter
     {

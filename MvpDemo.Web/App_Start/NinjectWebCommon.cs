@@ -1,3 +1,7 @@
+using MvpDemo.Presentation.Navigation;
+using MvpDemo.Presentation.StockQuote;
+using MvpDemo.Web.Navigation;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(MvpDemo.Web.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(MvpDemo.Web.App_Start.NinjectWebCommon), "Stop")]
 

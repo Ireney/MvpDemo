@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 using MvpDemo.Presentation;
+using MvpDemo.Presentation.About;
 using Ninject;
 
 namespace MvpDemo.Web

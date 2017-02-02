@@ -2,10 +2,12 @@
 using System.Windows;
 using MvpDemo.Domain;
 using MvpDemo.Presentation;
+using MvpDemo.Presentation.Navigation;
+using MvpDemo.Presentation.StockQuote;
 
 namespace MvpDemo.Desktop
 {
-    public partial class MainWindow : IDefaultView
+    public partial class MainWindow : IStockQuoteView
     {
         private readonly IStockQuotePresenter _presenter;
 
@@ -28,7 +30,7 @@ namespace MvpDemo.Desktop
             set { TextBoxInput.Text = value; }
         }
 
-        IList<StockInfo> IDefaultView.Quotes
+        IList<StockInfo> IStockQuoteView.Quotes
         {
             get { return DataGridQuotes.ItemsSource as IList<StockInfo>; }
             set { DataGridQuotes.ItemsSource = value; }
