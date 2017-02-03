@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.UI;
 using MvpDemo.Presentation;
-using Ninject;
 
 namespace MvpDemo.Web
 {
@@ -9,7 +8,6 @@ namespace MvpDemo.Web
         where TPresenter : IPresenter<TView>
         where TView : class, IView
     {
-        [Inject]
         public TPresenter Presenter { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
