@@ -44,6 +44,7 @@
     <Compile Include="About\IAboutPresenter.cs" />
     <Compile Include="About\IAboutView.cs" />
     <Compile Include="IPresenter.cs" />
+    <Compile Include="IView.cs" />
     <Compile Include="Navigation\INavigationRouteSystem.cs" />
     <Compile Include="Navigation\INavigator.cs" />
     <Compile Include="Navigation\Navigator.cs" />

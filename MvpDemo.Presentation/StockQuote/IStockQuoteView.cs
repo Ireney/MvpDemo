@@ -3,7 +3,7 @@ using MvpDemo.Domain;
 
 namespace MvpDemo.Presentation.StockQuote
 {
-    public interface IStockQuoteView
+    public interface IStockQuoteView : IView
     {
         IList<StockInfo> Quotes { get; set; }
         string Message { get; set; }

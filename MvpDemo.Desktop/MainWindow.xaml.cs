@@ -13,7 +13,7 @@ namespace MvpDemo.Desktop
         {
             InitializeComponent();
             _presenter = presenter;
-            _presenter.Present(this);
+            _presenter.Bind(this);
         }
 
         public string Message

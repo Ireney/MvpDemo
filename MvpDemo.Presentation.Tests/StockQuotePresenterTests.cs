@@ -24,7 +24,7 @@ namespace MvpDemo.Presentation.Tests
             _sut = new StockQuotePresenter(_quoteService, _navigator);
 
             _defaultView = Substitute.For<IStockQuoteView>();
-            _sut.Present(_defaultView);
+            _sut.Bind(_defaultView);
         }
 
         [TestCleanup]

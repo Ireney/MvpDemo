@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Web.UI;
 using MvpDemo.Presentation.About;
-using Ninject;
 
 namespace MvpDemo.Web
 {
-    public partial class About : Page, IAboutView
+    public partial class AboutView : ViewBase<IAboutPresenter<IAboutView>, IAboutView>, IAboutView
     {
-        [Inject]
-        public IAboutPresenter<IAboutView> Presenter { get; set; }
-
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void PageLoad()
         {
-            Presenter.Present(this);
             Presenter.HandleParameter(Request.QueryString["x"]);
         }
 

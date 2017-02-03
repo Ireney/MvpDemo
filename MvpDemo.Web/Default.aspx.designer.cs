@@ -10,7 +10,7 @@
 namespace MvpDemo.Web {
     
     
-    public partial class _Default {
+    public partial class DefaultView {
         
         /// <summary>
         /// txtSymbols control.

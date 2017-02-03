@@ -4,7 +4,7 @@
     {
         public TView View { get; private set; }
 
-        public virtual void Present(TView view)
+        public virtual void Bind(TView view)
         {
             View = view;
         }

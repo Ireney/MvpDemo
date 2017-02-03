@@ -4,6 +4,6 @@
     {
         TView View { get; }
 
-        void Present(TView view);
+        void Bind(TView view);
     }
 }

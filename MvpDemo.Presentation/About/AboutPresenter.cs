@@ -13,7 +13,7 @@ namespace MvpDemo.Presentation.About
 
         public void HandleParameter(object parameter)
         {
-           View.Message = parameter == null ? "[No  value passed]" : parameter as string;
+           View.Message = parameter == null ? "[No value passed]" : parameter as string;
         }
 
         public void Redirect()

@@ -10,7 +10,7 @@
 namespace MvpDemo.Web {
     
     
-    public partial class About {
+    public partial class AboutView {
         
         /// <summary>
         /// lblParam control.

@@ -14,7 +14,7 @@ namespace MvpDemo.Desktop
         {
             InitializeComponent();
             _presenter = presenter;
-            _presenter.Present(this);
+            _presenter.Bind(this);
 
             Loaded += (sender, args) => _presenter.HandleParameter(Argument);
         }
