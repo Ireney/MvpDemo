@@ -47,6 +47,7 @@
     <Compile Include="IView.cs" />
     <Compile Include="Navigation\INavigationRouteSystem.cs" />
     <Compile Include="Navigation\INavigator.cs" />
+    <Compile Include="Navigation\NavigationTargets.cs" />
     <Compile Include="Navigation\Navigator.cs" />
     <Compile Include="PresenterBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

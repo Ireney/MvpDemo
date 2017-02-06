@@ -57,7 +57,7 @@ namespace MvpDemo.Presentation.Tests
             _sut.Redirect();
 
             //Assert
-            _navigator.Received(1).Goto("home");
+            _navigator.Received(1).Goto(NavigationTargets.Home);
         }
     }
 }

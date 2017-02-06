@@ -107,7 +107,7 @@ namespace MvpDemo.Presentation.Tests
             _sut.Redirect();
 
             //Assert
-            _navigator.Received().Goto("about", "This text is an argument passed from the presenter.");
+            _navigator.Received().Goto(NavigationTargets.About, "This text is an argument passed from the presenter.");
         }
     }
 }
