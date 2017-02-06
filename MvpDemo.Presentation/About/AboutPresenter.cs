@@ -18,7 +18,7 @@ namespace MvpDemo.Presentation.About
 
         public void Redirect()
         {
-            _navigator.Goto("home");
+            _navigator.Goto(NavigationTargets.Home);
         }
     }
 }

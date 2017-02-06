@@ -14,18 +14,18 @@ namespace MvpDemo.Desktop
             _container = container;
         }
 
-        public void Goto(string view, object argument)
+        public void Goto(NavigationTargets view, object argument)
         {
             switch (view)
             {
-                case "home":
+                case NavigationTargets.Home:
                     if (_aboutWindow != null)
                     {
                         _aboutWindow.Close();
                         _aboutWindow = null;
                     }
                     break;
-                case "about":
+                case NavigationTargets.About:
                     if (_aboutWindow == null)
                     {
                         _aboutWindow = _container.Resolve<About>();

@@ -5,14 +5,14 @@ namespace MvpDemo.Web.Navigation
 {
     public class SiteNavigationRouteSystem : INavigationRouteSystem
     {
-        public void Goto(string view, object argument)
+        public void Goto(NavigationTargets view, object argument)
         {
             switch (view)
             {
-                case "home":
+                case NavigationTargets.Home:
                     HttpContext.Current.Response.Redirect("~/default.aspx");
                     break;
-                case "about":
+                case NavigationTargets.About:
                     HttpContext.Current.Response.Redirect($"~/about.aspx?x='{argument}'");
                     break;
             }

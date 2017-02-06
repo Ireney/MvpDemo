@@ -17,18 +17,16 @@ namespace MvpDemo.Presentation.StockQuote
         public void Refresh()
         {
             var symbols = View.Symbols;
-            var stocks = _quoteService.GetQuotes(symbols);
-
-            View.Quotes = stocks;
-
+            var quotes = _quoteService.GetQuotes(symbols);
             var providerName = _quoteService.GetProviderName();
 
-            View.Message = $"{stocks.Count} quotes found. Provided by {providerName}.";
+            View.Quotes = quotes;
+            View.Message = $"{quotes.Count} quotes found. Provided by {providerName}.";
         }
 
         public void Redirect()
         {
-            _navigator.Goto("about", "This text is an argument passed from the presenter.");
+            _navigator.Goto(NavigationTargets.About, "This text is an argument passed from the presenter.");
         }
     }
 }
