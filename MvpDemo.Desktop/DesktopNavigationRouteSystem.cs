@@ -1,17 +1,18 @@
 using System.Windows;
+using Microsoft.Practices.Unity;
 using MvpDemo.Presentation.Navigation;
 
 namespace MvpDemo.Desktop
 {
     public class DesktopNavigationRouteSystem : INavigationRouteSystem
     {
-//        private readonly IKernel _kernel;
         private About _aboutWindow;
+        private readonly IUnityContainer _container;
 
-//        public DesktopNavigationRouteSystem(IKernel kernel)
-//        {
-//            _kernel = kernel;
-//        }
+        public DesktopNavigationRouteSystem(IUnityContainer container)
+        {
+            _container = container;
+        }
 
         public void Goto(string view, object argument)
         {
@@ -27,7 +28,7 @@ namespace MvpDemo.Desktop
                 case "about":
                     if (_aboutWindow == null)
                     {
-//                        _aboutWindow = _kernel.Get<About>();
+                        _aboutWindow = _container.Resolve<About>();
                         _aboutWindow.Owner = Application.Current.MainWindow;
                         _aboutWindow.Argument = argument;
                     }
