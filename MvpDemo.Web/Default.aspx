@@ -12,7 +12,7 @@
             <h2>Stocks</h2>
 
             <div class="form-inline">
-                <asp:TextBox CssClass="form-control" style="max-width: 80%" ID="txtSymbols" runat="server" Text="MSFT,GOOG,AMZN,CMG.TO,BEI-UN.TO"></asp:TextBox>
+                <asp:TextBox CssClass="form-control" style="max-width: 80%" ID="txtSymbols" runat="server" Text="AAPL,MSFT,GOOG,AMZN"></asp:TextBox>
                 <asp:Button CssClass="btn btn-default" ID="btnRefresh" runat="server" Text="Refresh" onclick="RefreshClick"/>
                 <asp:Button CssClass="btn btn-default" ID="btnRedirect" runat="server" Text="About" onclick="RedirectClick"/>
             </div>

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MvpDemo.Domain
+﻿namespace MvpDemo.Domain
 {
     public class StockInfo
     {

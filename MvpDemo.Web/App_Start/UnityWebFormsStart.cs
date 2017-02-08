@@ -34,6 +34,7 @@ namespace MvpDemo.Web.App_Start
         /// <param name="container">Instance of the container to populate.</param>
         private static void RegisterDependencies(IUnityContainer container)
         {
+            container.AddNewExtension<DataDependencyExtension>();
             container.AddNewExtension<CoreDependencyExtension>();
             container.RegisterType<INavigationRouteSystem, SiteNavigationRouteSystem>();
         }
