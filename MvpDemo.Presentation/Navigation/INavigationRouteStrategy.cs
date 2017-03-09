@@ -1,8 +1,7 @@
 namespace MvpDemo.Presentation.Navigation
 {
-    public interface INavigator
+    public interface INavigationRouteStrategy
     {
-        void Goto(NavigationTarget navigationTarget);
         void Goto(NavigationTarget navigationTarget, object argument);
     }
 }

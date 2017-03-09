@@ -4,28 +4,28 @@ using MvpDemo.Presentation.Navigation;
 
 namespace MvpDemo.Desktop
 {
-    public class DesktopNavigationRouteSystem : INavigationRouteSystem
+    public class DesktopNavigationRouteStrategy : INavigationRouteStrategy
     {
         private About _aboutWindow;
         private readonly IUnityContainer _container;
 
-        public DesktopNavigationRouteSystem(IUnityContainer container)
+        public DesktopNavigationRouteStrategy(IUnityContainer container)
         {
             _container = container;
         }
 
-        public void Goto(NavigationTargets view, object argument)
+        public void Goto(NavigationTarget navigationTarget, object argument)
         {
-            switch (view)
+            switch (navigationTarget)
             {
-                case NavigationTargets.Home:
+                case NavigationTarget.Home:
                     if (_aboutWindow != null)
                     {
                         _aboutWindow.Close();
                         _aboutWindow = null;
                     }
                     break;
-                case NavigationTargets.About:
+                case NavigationTarget.About:
                     if (_aboutWindow == null)
                     {
                         _aboutWindow = _container.Resolve<About>();

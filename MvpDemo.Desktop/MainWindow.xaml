@@ -9,7 +9,7 @@
     <Window.Resources>
 
     </Window.Resources>
-    <Grid Margin="0,0,2,0">
+    <Grid Margin="0,10,2,0">
         <TextBox x:Name="TextBoxInput" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0"
                  TextWrapping="Wrap" Text="MSFT,AMZN" VerticalAlignment="Top" Width="242" BorderBrush="LightGray">
         </TextBox>

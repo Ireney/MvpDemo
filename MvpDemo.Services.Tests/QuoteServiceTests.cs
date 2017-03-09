@@ -38,7 +38,7 @@ namespace MvpDemo.Services.Tests
         }
 
         [TestMethod]
-        public void SHouldGetProviderName_FromRepository_OnGetProviderName()
+        public void ShouldGetProviderName_FromRepository_OnGetProviderName()
         {
             //Arrange
 

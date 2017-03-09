@@ -16,7 +16,7 @@ namespace MvpDemo.Desktop
             _presenter.Bind(this);
         }
 
-        public string Message
+        public string Summary
         {
             get { return LabelMessage.Content as string; }
             set { LabelMessage.Content = value; }

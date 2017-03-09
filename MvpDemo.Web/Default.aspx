@@ -3,8 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>MPV Demo</h1>
-        <p class="lead">MVP is a derivative of MVC aimed at providing a cleaner separation between the view, the model, and the controller.</p>
+        <h1>MVP Demo</h1>
+        <p class="lead">MVP is a derivative of MVC aimed at providing a cleaner separation between the view, the model, and the presenter.</p>
     </div>
 
     <div class="row">
@@ -20,7 +20,7 @@
             <p>
                 <asp:GridView 
                     CssClass="table table-bordered" 
-                    ID="GridView1" 
+                    ID="grdStockQuotes" 
                     runat="server">
                 </asp:GridView>
             </p>

@@ -14,8 +14,8 @@ namespace MvpDemo.Infrastructure
         protected override void Initialize()
         {
             //service
-//            Container.RegisterType<IQuoteService, QuoteService>();
-            Container.RegisterType<IQuoteService, RemoteQuoteService>();
+            Container.RegisterType<IQuoteService, QuoteService>();
+//            Container.RegisterType<IQuoteService, RemoteQuoteService>();
             Container.RegisterType<HttpClient>(new InjectionFactory(factory =>
             {
                 var client = new HttpClient {BaseAddress = new Uri("http://localhost:62228/")};

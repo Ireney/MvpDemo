@@ -8,8 +8,8 @@ namespace MvpDemo.Infrastructure
         protected override void Initialize()
         {
             //data
-            Container.RegisterType<IQuoteDataContext, YahooQuoteDataContext>();
-//            Container.RegisterType<IQuoteDataContext, GoogleQuoteDataContext>();
+            Container.RegisterType<IQuoteDataContext, GoogleQuoteDataContext>();
+//            Container.RegisterType<IQuoteDataContext, YahooQuoteDataContext>();
             Container.RegisterType<IStockQuoteRepository, StockQuoteRepository>();
         }
     }

@@ -27,7 +27,7 @@ namespace MvpDemo.Desktop
             _container = new UnityContainer();
             _container.AddNewExtension<DataDependencyExtension>();
             _container.AddNewExtension<CoreDependencyExtension>();
-            _container.RegisterType<INavigationRouteSystem, DesktopNavigationRouteSystem>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<INavigationRouteStrategy, DesktopNavigationRouteStrategy>(new ContainerControlledLifetimeManager());
         }
 
         private void ComposeObjects()

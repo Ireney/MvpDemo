@@ -7,20 +7,20 @@ namespace MvpDemo.Presentation.Tests
     [TestClass]
     public class NavigatorTests
     {
-        private INavigationRouteSystem _routeSystem;
+        private INavigationRouteStrategy _routeStrategy;
         private Navigator _sut;
 
         [TestInitialize]
         public void TestInitialize()
         {
-            _routeSystem = Substitute.For<INavigationRouteSystem>();
-            _sut = new Navigator(_routeSystem);
+            _routeStrategy = Substitute.For<INavigationRouteStrategy>();
+            _sut = new Navigator(_routeStrategy);
         }
 
         [TestCleanup]
         public void TestCleanup()
         {
-            _routeSystem = null;
+            _routeStrategy = null;
             _sut = null;
         }
 
@@ -30,10 +30,10 @@ namespace MvpDemo.Presentation.Tests
             //Arrange
             
             //Act
-            _sut.Goto(NavigationTargets.About);
+            _sut.Goto(NavigationTarget.About);
 
             //Assert
-            _routeSystem.Received(1).Goto(NavigationTargets.About, null);
+            _routeStrategy.Received(1).Goto(NavigationTarget.About, null);
         }
 
         [TestMethod]
@@ -43,10 +43,10 @@ namespace MvpDemo.Presentation.Tests
             var navigationParameter = new SomeParameterType();
 
             //Act
-            _sut.Goto(NavigationTargets.About, navigationParameter);
+            _sut.Goto(NavigationTarget.About, navigationParameter);
 
             //Assert
-            _routeSystem.Received(1).Goto(NavigationTargets.About, navigationParameter);
+            _routeStrategy.Received(1).Goto(NavigationTarget.About, navigationParameter);
         }
     }
     internal class SomeParameterType {}

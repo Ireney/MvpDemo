@@ -18,7 +18,7 @@ namespace MvpDemo.Web.App_Start
         /// </summary>
         /// <remarks>
         /// Do not edit this method. Perform any modifications in the
-        /// see cref="RegisterDependencies" /> method.
+        /// <see cref="RegisterDependencies" /> method.
         /// </remarks>
         internal static void PostStart()
         {
@@ -36,7 +36,7 @@ namespace MvpDemo.Web.App_Start
         {
             container.AddNewExtension<DataDependencyExtension>();
             container.AddNewExtension<CoreDependencyExtension>();
-            container.RegisterType<INavigationRouteSystem, SiteNavigationRouteSystem>();
+            container.RegisterType<INavigationRouteStrategy, SiteNavigationRouteStrategy>();
         }
     }
 }

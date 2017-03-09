@@ -1,6 +1,6 @@
 ﻿namespace MvpDemo.Presentation.Navigation
 {
-    public enum NavigationTargets
+    public enum NavigationTarget
     {
         Home,
         About
