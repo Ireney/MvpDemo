@@ -21,12 +21,12 @@ namespace MvpDemo.Presentation.StockQuote
             var providerName = _quoteService.GetProviderName();
 
             View.Quotes = quotes;
-            View.Message = $"{quotes.Count} quotes found. Provided by {providerName}.";
+            View.Summary = $"{quotes.Count} quotes found. Provided by {providerName}.";
         }
 
         public void Redirect()
         {
-            _navigator.Goto(NavigationTargets.About, "This text is an argument passed from the presenter.");
+            _navigator.Goto(NavigationTarget.About, "This text is an argument passed from the presenter.");
         }
     }
 }

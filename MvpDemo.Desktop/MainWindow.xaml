@@ -9,7 +9,7 @@
     <Window.Resources>
 
     </Window.Resources>
-    <Grid Margin="0,0,2,0">
+    <Grid Margin="0,10,2,0">
         <TextBox x:Name="TextBoxInput" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0"
                  TextWrapping="Wrap" Text="MSFT,AMZN" VerticalAlignment="Top" Width="242" BorderBrush="LightGray">
         </TextBox>
@@ -19,7 +19,8 @@
                 VerticalAlignment="Top" Width="71" Click="ButtonRedirectClick" />
         <DataGrid x:Name="DataGridQuotes" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"
                   Height="239"
-                  Width="398" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray" />
+                  Width="398" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray"
+                  IsReadOnly="True"/>
         <Label x:Name="LabelMessage" Content="0 quotes found." HorizontalAlignment="Left" Margin="10,284,0,10" Width="398" HorizontalContentAlignment="Right" Padding="5,5,0,0" />
     </Grid>
 </Window>

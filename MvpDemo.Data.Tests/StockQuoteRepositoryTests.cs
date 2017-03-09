@@ -32,5 +32,15 @@ namespace MvpDemo.Data.Tests
             //Assert
             _dataContext.Received().GetQuotes("AAPL");
         }
+
+        [TestMethod]
+        public void ShouldGetProvider_FromDataContext_OnGetQuoteProvider()
+        {           
+            //Act
+            _sut.GetQuoteProvider();
+
+            //Assert
+            var result = _dataContext.Received(1).ProviderName;
+        }
     }
 }

@@ -1,34 +1,34 @@
 using System.Windows;
+using Microsoft.Practices.Unity;
 using MvpDemo.Presentation.Navigation;
-using Ninject;
 
 namespace MvpDemo.Desktop
 {
-    public class DesktopNavigationRouteSystem : INavigationRouteSystem
+    public class DesktopNavigationRouteStrategy : INavigationRouteStrategy
     {
-        private readonly IKernel _kernel;
         private About _aboutWindow;
+        private readonly IUnityContainer _container;
 
-        public DesktopNavigationRouteSystem(IKernel kernel)
+        public DesktopNavigationRouteStrategy(IUnityContainer container)
         {
-            _kernel = kernel;
+            _container = container;
         }
 
-        public void Goto(NavigationTargets view, object argument)
+        public void Goto(NavigationTarget navigationTarget, object argument)
         {
-            switch (view)
+            switch (navigationTarget)
             {
-                case NavigationTargets.Home:
+                case NavigationTarget.Home:
                     if (_aboutWindow != null)
                     {
                         _aboutWindow.Close();
                         _aboutWindow = null;
                     }
                     break;
-                case NavigationTargets.About:
+                case NavigationTarget.About:
                     if (_aboutWindow == null)
                     {
-                        _aboutWindow = _kernel.Get<About>();
+                        _aboutWindow = _container.Resolve<About>();
                         _aboutWindow.Owner = Application.Current.MainWindow;
                         _aboutWindow.Argument = argument;
                     }

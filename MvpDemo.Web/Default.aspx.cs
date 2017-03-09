@@ -11,15 +11,15 @@ namespace MvpDemo.Web
 
         public IList<StockInfo> Quotes
         {
-            get { return GridView1.DataSource as IList<StockInfo>; }
+            get { return grdStockQuotes.DataSource as IList<StockInfo>; }
             set
             {
-                GridView1.DataSource = value;
-                GridView1.DataBind();
+                grdStockQuotes.DataSource = value;
+                grdStockQuotes.DataBind();
             }
         }
 
-        public string Message
+        public string Summary
         {
             get { return lblMessage.Text; }
             set { lblMessage.Text = value; }

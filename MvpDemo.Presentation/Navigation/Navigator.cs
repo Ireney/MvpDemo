@@ -2,21 +2,21 @@ namespace MvpDemo.Presentation.Navigation
 {
     public class Navigator : INavigator
     {
-        private readonly INavigationRouteSystem _navigationRouteSystem;
+        private readonly INavigationRouteStrategy _navigationRouteStrategy;
  
-        public Navigator(INavigationRouteSystem navigationRouteSystem)
+        public Navigator(INavigationRouteStrategy navigationRouteStrategy)
         {
-            _navigationRouteSystem = navigationRouteSystem;
+            _navigationRouteStrategy = navigationRouteStrategy;
         }
 
-        public void Goto(NavigationTargets view)
+        public void Goto(NavigationTarget navigationTarget)
         {
-            _navigationRouteSystem?.Goto(view, null);
+            _navigationRouteStrategy?.Goto(navigationTarget, null);
         }
 
-        public void Goto(NavigationTargets view, object argument)
+        public void Goto(NavigationTarget navigationTarget, object argument)
         {
-            _navigationRouteSystem?.Goto(view, argument);
+            _navigationRouteStrategy?.Goto(navigationTarget, argument);
         }
     }
 }
